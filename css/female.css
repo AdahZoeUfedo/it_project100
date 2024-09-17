@@ -1,0 +1,152 @@
+*{
+    /*margin:0;
+    padding: 0;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Styling */
+.header-container {
+    background-color: #a0b9d2; /* Dark blue background for the header */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Keep the header fixed at the top */
+    width: 100%; /* Make the header span the full width of the page */
+    top: 0; /* Align the header at the top */
+    z-index: 1000; /* Ensure the header stays above other content */
+
+}
+
+/* Logo Styling */
+.header-container .logo {
+    width: 100px; /* Adjust the width of the logo */
+    
+}
+
+/* Navigation Styling */
+nav {
+    display: flex; /* Display nav items in a row */
+    gap: 20px; /* Spacing between nav items */
+    
+}
+
+nav a {
+    color: white; /* White color for nav links */
+    text-decoration: none; /* Remove underline from nav links */
+    font-size: 18px; /* Font size for nav links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+
+
+.paetos{
+display: flex;
+justify-content: space-around;
+}
+
+.paetos span{
+color: red;
+}
+
+.paetos img{
+    width: 80%;
+    height: 40%;
+    border-radius: 1%;
+}
+
+.kelson{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.kelson img{
+    border-radius: 1%;
+}
+
+.kelson p span{
+    /* margin-left:10%;*/
+    color: red;
+}
+
+.text-containerp {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically*/
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.text-containerk {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically*/
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-containerc {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically*/
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-containers {
+    display: flex;
+    flex-direction: column; /* Stack text and button vertically*/
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button {
+    margin-top: 10px; /* Add some space between the text and the button */
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    background-color: rgb(42, 42, 100);
+    border-radius:15px;
+}
+
+.button :hover{
+    color:green;
+}
+
+.cicl img{
+    width: 60%;
+    height: 10%;
+    border-radius: 1%;
+    /*margin-right: 10%;*/
+}
+
+.cicl{
+    display: flex;
+}
+
+
+.cicl p span{
+    color: red;
+}
+
+.stanzel img{
+    width: 60%;
+    height: 10%;
+    border-radius: 1%;
+    /*margin-right: 10%;*/
+}
+
+.stanzel{
+    display: flex;
+}
+
+
+.stanzel p span{
+    color: red;
+}

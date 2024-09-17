@@ -1,0 +1,45 @@
+*{
+    /*margin:0;
+    padding: 0;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Styling */
+.header-container {
+    background-color: #a0b9d2; /* Dark blue background for the header */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Keep the header fixed at the top */
+    width: 100%; /* Make the header span the full width of the page */
+    top: 0; /* Align the header at the top */
+    z-index: 1000; /* Ensure the header stays above other content */
+
+}
+
+/* Logo Styling */
+.header-container .logo {
+    width: 100px; /* Adjust the width of the logo */
+    
+}
+
+/* Navigation Styling */
+nav {
+    display: flex; /* Display nav items in a row */
+    gap: 20px; /* Spacing between nav items */
+    
+}
+
+nav a {
+    color: white; /* White color for nav links */
+    text-decoration: none; /* Remove underline from nav links */
+    font-size: 18px; /* Font size for nav links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+

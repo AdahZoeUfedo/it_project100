@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Hostel Booking</title>
+</head>
+<link rel="stylesheet" href="css/stanzel.css">
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="css/images/logo.png" alt="University Logo" class="logo">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Accommodation</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1>University Hostel Booking</h1>
+    
+    <form id="bookingForm">
+        <!-- Gender Selection -->
+        <label for="gender">Select Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">--Select Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        
+        <!-- Hostel Selection (will be filled dynamically) -->
+        <div id="hostelSelection" style="display: none;">
+            <label for="hostel">Select Hostel:</label>
+            <select id="hostel" name="hostel" required>
+                <!-- Options will be added here based on gender selection -->
+            </select>
+        </div>
+        
+        <!-- Room and Bed Selection (will be added later) -->
+         <!-- Room Selection -->
+        <div id="roomSelection" style="display: none;">
+            <label for="room">Select Room:</label>
+            <select id="room" name="room" required>
+                <!-- Room options will be added here based on hostel selection -->
+            </select>
+        </div>
+        
+
+<!-- Bed selection dropdown (initially hidden) -->
+<div id="bedSelection" style="display: none;">
+    <label for="bed">Select Bed:</label>
+    <select id="bed">
+        <!-- Bed options will be added here dynamically -->
+    </select>
+</div>
+
+
+
+        <!-- Payment Section (will be added later) -->
+    </form>
+    
+    <!-- JavaScript will be added here to handle dynamic hostel options -->
+
+
+    <script>
+        // JavaScript to handle dynamic hostel selection
+        document.getElementById('gender').addEventListener('change', function() {
+            var gender = this.value;
+            var hostelSelect = document.getElementById('hostel');
+            var hostelSelectionDiv = document.getElementById('hostelSelection');
+
+            // Clear previous options
+            hostelSelect.innerHTML = '';
+
+            if (gender === 'male') {
+                // Add male hostel options
+                var maleHostels = ['Alpha', 'Beta', 'Cardia', 'Delta'];
+                maleHostels.forEach(function(hostel) {
+                    var option = document.createElement('option');
+                    option.value = hostel.toLowerCase();
+                    option.textContent = hostel;
+                    hostelSelect.appendChild(option);
+                });
+            } else if (gender === 'female') {
+                // Add female hostel options
+                var femaleHostels = ['Paetos', 'Kelson', 'Cicl', 'Stanzel'];
+                femaleHostels.forEach(function(hostel) {
+                    var option = document.createElement('option');
+                    option.value = hostel.toLowerCase();
+                    option.textContent = hostel;
+                    hostelSelect.appendChild(option);
+                });
+            }
+
+            // Show the hostel selection div
+            hostelSelectionDiv.style.display = 'block';
+
+        });
+            // Handle room selection based on hostel selection
+        document.getElementById('hostel').addEventListener('change', function() {
+            var roomSelect = document.getElementById('room');
+            var roomSelectionDiv = document.getElementById('roomSelection');
+
+            // Clear previous options
+            roomSelect.innerHTML = '';
+
+            // Add room options (1 to 100)
+            for (var i = 1; i <= 100; i++) {
+                var option = document.createElement('option');
+                option.value = 'room' + i;
+                option.textContent = 'Room ' + i;
+                roomSelect.appendChild(option);
+            }
+
+            // Show the room selection div
+            roomSelectionDiv.style.display = 'block';
+        });
+
+        // Handle bed selection based on room selection
+document.getElementById('room').addEventListener('change', function() {
+    var bedSelect = document.getElementById('bed');
+    var bedSelectionDiv = document.getElementById('bedSelection');
+
+    // Clear previous bed options
+    bedSelect.innerHTML = '';
+
+    // Add bed options (1 to 4)
+    for (var i = 1; i <= 4; i++) {
+        var option = document.createElement('option');
+        option.value = 'bed' + i;
+        option.textContent = 'Bed ' + i;
+        bedSelect.appendChild(option);
+    }
+
+    // Show the bed selection div
+    bedSelectionDiv.style.display = 'block';
+});
+
+    </script>
+</body>
+</html>
